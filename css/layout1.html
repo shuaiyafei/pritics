@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            layout1(左边内容固定 右边自适应)
-        </title>
-        <style>
-            body {
-                margin: 0;
-                overflow: hidden;
-            }
-            /* flex布局 */
-            /* .box1 {
+
+<head>
+    <title>
+        layout1(左边内容固定 右边自适应)
+    </title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* flex布局 */
+        /* .box1 {
                 display: flex;
                 display: -webkit-flex;
             }
@@ -22,8 +24,8 @@
                 flex: 1;
             } */
 
-            /* calc */
-            /* .box2 {
+        /* calc */
+        /* .box2 {
                 width: 200px;
                 height: 100%;
                 float: left;
@@ -34,8 +36,8 @@
                 float: left;
             } */
 
-            /* table-cell */
-            /* .box1 {
+        /* table-cell */
+        /* .box1 {
                 display: table;
             }
             .box2 {
@@ -45,25 +47,28 @@
             .box3 {
                 display: table-cell;
             } */
-            
-            /* position */
-            .box2 {
-                width: 200px;
-                height: 100vh;
-            }
-            .box3 {
-                height: 100vh;
-                left: 200px;
-                right: 0;
-                position: absolute;
-                top: 0;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="box1" style="width: 100vw; height: 100vh;">
-            <div class="box2"></div>            
-            <div class="box3" style="background: #ccc;"></div>
-        </div>
-    </body>
+
+        /* position */
+        .box2 {
+            width: 200px;
+            height: 100vh;
+        }
+
+        .box3 {
+            height: 100vh;
+            left: 200px;
+            right: 0;
+            position: absolute;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1" style="width: 100vw; height: 100vh;">
+        <div class="box2"></div>
+        <div class="box3" style="background: #ccc;"></div>
+    </div>
+</body>
+
 </html>

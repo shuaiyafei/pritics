@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>layout3(弹性盒子布局)</title>
-        <style>
-            body {
-                margin: 0;
-            }
-            div {
-                font-size: 2em;
-                text-align: center;
-            }
-            /* justify-content 可选属性值  默认 flex-start
+
+<head>
+    <title>layout3(弹性盒子布局)</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            font-size: 2em;
+            text-align: center;
+        }
+
+        /* justify-content 可选属性值  默认 flex-start
                                     flex-start   内容左对齐显示
                                     flex-end  内容右对齐显示
                                     center 内容居中显示
@@ -19,34 +22,34 @@
                                     space-evenly 内容每个距离均相等
              */
 
-            /* div {
+        /* div {
                 justify-content: flex-start;
             } */
 
-            /* div {
+        /* div {
                 justify-content: flex-end;
             } */
 
-            /* div {
+        /* div {
                 justify-content: center;
             } */
 
-            /* div {
+        /* div {
                 justify-content: space-around;
             } */
 
-            /* div {
+        /* div {
                 justify-content: space-between;
             } */
 
-            /* div {
+        /* div {
                 justify-content: space-evenly;
             } */
 
-            /* 在flex布局中 设置元素的固定宽度 设置其他元素自适应 flex: *; 如果有多个自适应元素 则会把各个元素的flex的值加起来然后平分
+        /* 在flex布局中 设置元素的固定宽度 设置其他元素自适应 flex: *; 如果有多个自适应元素 则会把各个元素的flex的值加起来然后平分
                即除去固定的元素 剩下的元素在剩余位置的宽度 
              */
-            /* .box > div:first-child {
+        /* .box > div:first-child {
                 flex: 1;
             }
             .box > div:nth-child(2) {
@@ -58,16 +61,18 @@
             .box > div:last-child {
                 flex: 1;
             } */
-        </style>
-    </head>
-    <body>
-        <div class="box1" style="display: flex; display: -webkit-flex; width: 100vw; height: 100vh;">
-            <div style="background: #ccc; width: 10%; height: 10%;">1</div>
-            <div style="background: #ff0; width: 10%; height: 10%;">2</div>
-            <div style="background: #900; width: 10%; height: 10%;">3</div>
-            <div style="background: #66f; width: 10%; height: 10%;">4</div>
-            <div style="background: #880; width: 10%; height: 10%;">5</div>
-            <div style="background: #C88; width: 10%; height: 10%;">6</div>
-        </div>
-    </body>
+    </style>
+</head>
+
+<body>
+    <div class="box1" style="display: flex; display: -webkit-flex; width: 100vw; height: 100vh;">
+        <div style="background: #ccc; width: 10%; height: 10%;">1</div>
+        <div style="background: #ff0; width: 10%; height: 10%;">2</div>
+        <div style="background: #900; width: 10%; height: 10%;">3</div>
+        <div style="background: #66f; width: 10%; height: 10%;">4</div>
+        <div style="background: #880; width: 10%; height: 10%;">5</div>
+        <div style="background: #C88; width: 10%; height: 10%;">6</div>
+    </div>
+</body>
+
 </html>

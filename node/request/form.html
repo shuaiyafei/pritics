@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .wrap {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            display: -webkit-flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <input type="text" />
+        <button>提交</button>
+    </div>
+    
+    <script>
+        const input = document.querySelectorAll('input')[0];
+        const submit = document.querySelectorAll('button')[0];
+        const xhr = new XMLHttpRequest();
+        xhr.open('post', 'http://127.0.0.1:8994');
+        submit.addEventListener('click', () => {
+            xhr.send(``);
+        });
+    </script>
+</body>
+</html>

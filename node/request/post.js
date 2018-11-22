@@ -17,12 +17,10 @@ const server = http.createServer((req, res) => {
         data += chunk;
     });
 
-    req.on('end', (data) => {
-        data = querystring.parse(data);
+    req.on('end', () => {
+        data = JSON.stringify({data: `<h1>${data}</h1>`});
         res.end(data);
     });
-
-    res.end();
 });
 
 server.listen(port, hostname, () => {

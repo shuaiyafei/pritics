@@ -23,12 +23,21 @@
     </div>
     
     <script>
-        const input = document.querySelectorAll('input')[0];
+        const url = 'http://127.0.0.1:8994';
         const submit = document.querySelectorAll('button')[0];
-        const xhr = new XMLHttpRequest();
-        xhr.open('post', 'http://127.0.0.1:8994');
+        
         submit.addEventListener('click', () => {
-            xhr.send(``);
+            const value = document.querySelectorAll('input')[0].value;
+
+            fetch(url, {
+                method: 'post',
+                headers: {
+                    'content-type': 'application/json;charset=utf-8'
+                },
+                body: value
+            }).then(v => v.json()).then(val => {
+                document.write(val.data);
+            });
         });
     </script>
 </body>

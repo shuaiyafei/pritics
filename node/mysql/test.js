@@ -4,7 +4,7 @@ const util = require('util');
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'syf5525278.',
+    password: 'root',
     database: 'node_store'
 });
 connection.connect();
@@ -31,16 +31,16 @@ connection.connect();
 // });
 
 // 增加数据库
-// const sql = 'INSERT INTO websites(Id, name, url, country) VALUES(0, ?, ?, ?)';
-// const sqlParam = ['apple', 'www.apply.com', 'USA'];
+const sql = 'INSERT INTO websites(Id, name, url, country) VALUES(0, ?, ?, ?)';
+const sqlParam = ['apple', 'www.apply.com', 'USA'];
 
-// connection.query(sql, sqlParam, (err, result) => {
-//     if (err) {
-//         console.log(err);
-//     } else {
-//         console.log(result);
-//     }
-// });
+connection.query(sql, sqlParam, (err, result) => {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log(result);
+    }
+});
 
 // 修改数据库
 // const sql = 'UPDATE websites set name = ?, url = ? WHERE id = ?';

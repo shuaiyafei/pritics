@@ -99,5 +99,43 @@ devServer: {
 webpack-dev-server --open
 ```
 
-#### webpack-dev-middleware
+#### webpack-dev-middleware   express
+
+可以将webpack处理之后的文件传给服务器
+
+```
+const express = require('exress');
+const webpack = require('webpick');
+const webpackDevMiddleware = require('webpack-dev-middleware');
+const config = require('./webpack.config.js');
+const app = express();
+
+const compiler = webpack(config);
+
+app.use(webpackDevMiddle(compiler, {
+    publicPath: config.output.publicPath
+}))
+```
+
+#### HMR 模块热替换
+
+**HMR不适用于生产环境 只适用于开发环境**
+
+```
+devServer: {
+    contentBase: './dist',
+    hot: true
+},
+plugin: [
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin()
+]
+
+
+
+
+if (module.hot) {
+    module.hot.accept('./print.js')
+}
+```
 

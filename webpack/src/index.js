@@ -1,48 +1,35 @@
 import _ from 'lodash';
-import printMe from './print';
-// import './style.css';
-// import Image from './image.jpg';
-// import Data from './data.xml';
+import printMe from './print.js';
+import './style.css';
 
-const component = () => {
-    // root
+function component() {
     const root = document.createElement('div');
-
     const element = document.createElement('div');
-    element.innerHTML = _.join(['hello ', 'world'], '');
-    element.classList.add('desc');
+    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
     root.appendChild(element);
 
     const btn = document.createElement('button');
-    btn.innerHTML = 'click me';
+    btn.innerHTML = 'Click';
     btn.onclick = printMe;
     root.appendChild(btn);
     
     return root;
 }
 
-// const component = () => {
-//     // 根节点
-//     const  root = document.createElement('div');
+// document.body.appendChild(component());
 
-//     const element = document.createElement('div');
-//     element.innerHTML = _.join(['hello ', 'world'], '');
-//     element.classList.add('desc');
-//     root.append(element);
+let element = component();
+document.body.appendChild(element);
 
-//     const img = document.createElement('img');
-//     img.classList.add('show');
-//     img.src = Image;
-//     root.appendChild(img);
-    
-//     const text = document.createElement('p');
-//     text.innerHTML = JSON.stringify(Data);
-//     root.appendChild(text);
+console.log(module.hot)
 
-//     return root;
-// }
-
-document.body.appendChild(component());
-
-
+if (module.hot) {
+    module.hot.accept('./print.js', function () {
+        console.log('Accepting the updated printMe module!');
+        // printMe();
+        document.body.removeChild(element);
+        element = component();
+        document.body.appendChild(element);
+    })
+}
 

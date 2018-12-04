@@ -6,6 +6,8 @@
 - [入口](https://github.com/shuaiyafei/pritics/blob/master/webpack/practise/concept/entry.md)
 - [输出](https://github.com/shuaiyafei/pritics/blob/master/webpack/practise/concept/output.md)
 - [模式](https://github.com/shuaiyafei/pritics/blob/master/webpack/practise/concept/mode.md)
+- [loader](https://github.com/shuaiyafei/pritics/blob/master/webpack/practise/concept/loader.md)
+- [插件](https://github.com/shuaiyafei/pritics/blob/master/webpack/practise/concept/plugin.md)
 
 
 

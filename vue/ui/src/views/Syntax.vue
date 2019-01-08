@@ -26,6 +26,38 @@
         <div class="index-show-p">
             <button @click="updateMsg">u msg</button>
         </div>
+
+        <div class="index-show-p">
+            <p>{{message}}</p>
+        </div>
+
+        <div class="index-show-p">
+            <p v-html="message"></p>
+        </div>
+
+        <div class="index-show-p">
+            <p v-text="message"></p>
+        </div>
+
+        <div class="index-show-p">
+            <p :title="title">title</p>
+        </div>
+
+        <div class="index-show-p">
+            <p v-html="title.split('').reverse().join('')"></p>
+        </div>
+
+        <div class="index-show-p">
+            <a v-bind:href="href">href</a>
+        </div>
+
+        <div class="index-show-p">
+            <p v-on:click="dos">method</p>
+        </div>
+
+        <div class="index-show-p">
+            <p v-on:click.prevent="dos">prevent</p>
+        </div>
     </div>
 </template>
 
@@ -33,12 +65,18 @@
 export default {
     data() {
         return {
-            msg: '{{ msg }}'
+            msg: '{{ msg }}',
+            message: '<span style="color: red;">message</span>',
+            title: 'title: title',
+            href: '//www.baidu.com'
         }
     },
     methods: {
         updateMsg() {
             this.msg += `<br><br>{{ msg }}`
+        },
+        dos() {
+            console.log(1)
         }
     }
 }

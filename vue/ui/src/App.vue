@@ -30,7 +30,7 @@
 #nav {
     display: flex;
     flex-direction: column;
-    min-width: 200px;
+    min-width: 250px;
     a {
         font-weight: bold;
         color: #2c3e50;

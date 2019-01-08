@@ -164,4 +164,27 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+.index-show-p {
+    margin: 20px 0;
+    background: #eee;
+    padding: 20px 40px;
+}
+.index-show-block {
+    margin-top: 20px;
+    padding: 20px 40px;
+}
+pre {
+    line-height: 11px;
+    font-family: "Roboto Mono", Monaco, courier, monospace;
+}
+button {
+    width: 60px;
+    height: 20px;
+    border-radius: 4px;
+    margin-right: 30px;
+    border: none;
+    background: #fff;
+    outline: none;
+}
 </style>

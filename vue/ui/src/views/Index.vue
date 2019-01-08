@@ -131,7 +131,7 @@ export default {
 
 <style>
 .index-show-p {
-    margin: 20px 0;
+    margin: 20px 0; 
     background: #eee;
     padding: 20px 40px;
 }

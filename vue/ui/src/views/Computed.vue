@@ -19,6 +19,28 @@
             <p>{{currentDate}}</p>
             <p>{{now()}}</p>
         </div>
+
+        <h4>计算属性和侦听器</h4>
+        <div class="index-show-p">
+            computed  watch
+        </div>
+
+        <h4>计算属性的 setter</h4>
+        <div class="index-show-p">
+            <pre>
+                export default { <br>
+                    computed: { <br>
+                        
+                    } <br>
+                } <br>
+            </pre>
+        </div>
+
+        
+        <h4>侦听器</h4>
+        <div class="index-show-p">
+            watch
+        </div>
     </div>
 </template>
 
